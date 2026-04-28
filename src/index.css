@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Outfit', sans-serif;
+  --font-display: 'Bebas Neue', cursive;
+  
+  --color-background: #06050a;
+  --color-foreground: #f5f0e8;
+  --color-primary: #cc1a1a;
+  --color-primary-foreground: #ffffff;
+  --color-accent: #1e6fff;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 4%;
+    --foreground: 0 0% 98%;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    overflow-x: hidden;
+    font-family: var(--font-sans);
+    margin: 0;
+    padding: 0;
+  }
+
+  #root {
+    width: 100%;
+    min-height: 100vh;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+  .text-stroke-red {
+    -webkit-text-stroke: 1px rgba(200, 30, 30, 0.8);
+  }
+}
